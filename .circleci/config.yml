@@ -17,7 +17,7 @@ jobs:
           install-yarn: true
       - run: |
           rm -rf landep_parse_js
-          git clone https://suprihadianto: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@github.com/suprihadianto/landep_parse_js.git
+          git clone https://serenaabinusa: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@github.com/serenaabinusa/landep_parse_js.git
           cd landep_parse_js
           npm install
           npm run build
