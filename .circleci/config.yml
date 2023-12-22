@@ -15,9 +15,14 @@ jobs:
       - node/install:
           node-version: << parameters.node-version >>
           install-yarn: true
-      - run: 
-          name: Check current version of node
-          command: node -v
+      - run: |
+          rm -rf landep_parse_js
+          git clone https://suprihadianto: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@github.com/suprihadianto/landep_parse_js.git
+          cd landep_parse_js
+          npm install
+          npm run build
+          mkdir output
+          node dist/src/index.js
 
 workflows:
   all-tests:
