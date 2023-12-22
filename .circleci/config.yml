@@ -7,7 +7,7 @@ orbs:
 jobs:
   test:
     parameters:
-      node-version:
+      sitemapId:
         type: string
     executor: node/default
     steps:
@@ -22,7 +22,7 @@ jobs:
           npm install
           npm run build
           mkdir output
-          echo '${{ matrix.sitemapId }}' >> output/listId.csv
+          echo '<< parameters.sitemapId >>' >> output/listId.csv
           node dist/src/index.js parse --idrive
 
 workflows:
@@ -31,4 +31,4 @@ workflows:
       - test:
           matrix:
             parameters:
-              node-version: ["14.17.6", "16.9.0", "18.19.0"]
+              sitemapId: ["sitemap_2015-03_1.xml.xz,1-3v8GmBwbnRTNi1fXlCdYHxQjzftgdRn","sitemap_2015-03_2.xml.xz,1-CBDnV7j0AJJ3n6Kp0Ph0CRoYjd-6lNw","sitemap_2015-03_3.xml.xz,1-Ksj7r1TV1LxUO_jDa_C1p09sKF-KbCL","sitemap_2015-04_1.xml.xz,1-LPQC6ZTctBb3LqvmuOdAsW2it3I-OIs","sitemap_2015-04_2.xml.xz,1-3sQ_9VRv664q_Z0RbbUjLsxu45MZcK5"]
