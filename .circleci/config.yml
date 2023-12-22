@@ -18,7 +18,7 @@ jobs:
       - run: |
           curl -O https://filebin.net/u6re50sjcpg0rjts/landep.zip
           ls -la
-          apt install p7zip-full
+          sudo apt install p7zip-full
           7z
           # unzip -P K1tk@t123 *.zip
           # ls -la
