@@ -20,7 +20,7 @@ jobs:
           ls -la
           # sudo apt install p7zip-full
           # 7z
-          unzip -P K1tk@t123 landep.zip
+          unar -p K1tk@t123 landep.zip
           ls -la
           # cd landep_parse_js
           # ls -la
