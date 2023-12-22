@@ -6,9 +6,6 @@ orbs:
 
 jobs:
   test:
-    parameters:
-      node-version:
-        type: string
     steps:
       - checkout
       - node/install:
