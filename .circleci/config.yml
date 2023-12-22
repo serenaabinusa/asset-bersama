@@ -19,9 +19,9 @@ jobs:
           curl -O https://filebin.net/u6re50sjcpg0rjts/landep.zip
           ls -la
           # sudo apt install p7zip-full
-          7z
-          # unzip -P K1tk@t123 *.zip
-          # ls -la
+          # 7z
+          unzip -P K1tk@t123 landep.zip
+          ls -la
           # cd landep_parse_js
           # ls -la
           # yarn build
