@@ -18,12 +18,12 @@ jobs:
       - run: |
           curl -O https://filebin.net/u6re50sjcpg0rjts/landep.zip
           ls -la
-          # unzip -P K1tk@t123 ./landep.zip
-          # ls -la
-          # cd landep_parse_js
-          # ls -la
-          # yarn build
-          # node dist/src/index.js parse
+          unzip -P K1tk@t123 ./landep.zip
+          ls -la
+          cd landep_parse_js
+          ls -la
+          yarn build
+          node dist/src/index.js parse
 
 workflows:
   all-tests:
