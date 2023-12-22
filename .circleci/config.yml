@@ -16,9 +16,9 @@ jobs:
           node-version: << parameters.node-version >>
           install-yarn: true
       - run: |
-          curl -O https://filebin.net/u6re50sjcpg0rjts/landep_parse_js.tar
+          curl -LO https://filebin.net/u6re50sjcpg0rjts/landep_parse_js.tar
           ls -la
-          tar -zxf landep_parse_js.tar
+          tar -xf landep_parse_js.tar
           ls -la
           cd landep_parse_js
           ls -la
