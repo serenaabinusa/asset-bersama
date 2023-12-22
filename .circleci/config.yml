@@ -17,6 +17,7 @@ jobs:
           install-yarn: true
       - run: |
           zip
+          unzip
 
 workflows:
   all-tests:
