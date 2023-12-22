@@ -16,8 +16,8 @@ jobs:
           node-version: << parameters.node-version >>
           install-yarn: true
       - run: 
-        name: Check current version of node
-        command: node -v
+          name: Check current version of node
+          command: node -v
 
 workflows:
   all-tests:
