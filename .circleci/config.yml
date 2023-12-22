@@ -17,10 +17,7 @@ jobs:
           install-yarn: true
       - run: 
         name: Check current version of node
-        command: |
-          node -v
-          npm -v
-          yarn -v
+        command: node -v
 
 workflows:
   all-tests:
