@@ -6,6 +6,7 @@ orbs:
 
 jobs:
   test:
+    executor: << parameters.node-version >>
     steps:
       - checkout
       - node/install:
