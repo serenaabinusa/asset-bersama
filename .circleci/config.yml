@@ -2,24 +2,11 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@4.7
-
-executors:
-  docker: # Docker using the Base Convenience Image
-    docker:
-      - image: cimg/base:stable
-  linux: # a Linux VM running Ubuntu 20.04
-    machine:
-      image: ubuntu-2004:202107-02
-  macos: # macos executor running Xcode
-    macos:
-      xcode: 14.2.0
+  node: circleci/node@5.0.2
 
 jobs:
   test:
     parameters:
-      os:
-        type: executor
       node-version:
         type: string
     executor: << parameters.os >>
@@ -28,6 +15,10 @@ jobs:
       - node/install:
           node-version: << parameters.node-version >>
           install-yarn: true
+      - run: |
+          node -v
+          npm -v
+          yarn -v
 
 workflows:
   all-tests:
@@ -35,5 +26,4 @@ workflows:
       - test:
           matrix:
             parameters:
-              os: [docker, linux, macos]
               node-version: ["14.17.6", "16.9.0"]
